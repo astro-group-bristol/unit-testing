@@ -3,17 +3,15 @@
 import pytest
 from christmas.functions import wrap_gift, calculate_cookies, calculate_lights
 
-def test_wrap_gift():
+def test_wrap_gift(paper):
     """Test wrapping a gift"""
     gift = "book"
-    paper = "red and green stripes"
     expected_result = "book wrapped in red and green stripes"
     assert wrap_gift(gift, paper) == expected_result
 
-def test_wrap_gift_empty():
+def test_wrap_gift_empty(paper):
     """Test wrapping an empty gift"""
     gift = ""
-    paper = "red and green stripes"
     expected_result = " wrapped in red and green stripes"
     assert wrap_gift(gift, paper) == expected_result
 
